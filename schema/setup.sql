@@ -7,7 +7,7 @@ use flights;
 create table airlines (
 iata_code char(2),
 airline varchar(30)
-) engine=columnstore default character set=utf8;
+) engine=innodb default character set=utf8;
 
 create table airports (
 iata_code char(3),
@@ -17,7 +17,7 @@ state char(2),
 country varchar(30),
 latitude float,
 longitude float
-) engine=columnstore default character set=utf8;
+) engine=innodb default character set=utf8;
 
 create table flights (
 year smallint,
@@ -52,4 +52,4 @@ weather_delay smallint,
 nas_delay smallint,
 security_delay smallint,
 late_aircraft_delay smallint
-) engine=columnstore default character set=utf8;
+) engine=innodb default character set=utf8;

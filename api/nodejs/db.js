@@ -8,6 +8,9 @@ require('dotenv').config();
 //const fs = require("fs");
 //const serverCert = [fs.readFileSync("skysql_chain.pem", "utf8")];
 
+var mariadb = require('mariadb');
+require('dotenv').config();
+
 const pool = mariadb.createPool({
   host: process.env.DB_HOST, 
   user: process.env.DB_USER, 
